@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Orbit Runner 3D</title>
+  <meta name="description" content="Jogo 3D web em HTML, CSS e JavaScript puro, inspirado na estética Orbit Labs." />
+  <meta name="theme-color" content="#070812" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="game-shell">
+    <section class="game-card" aria-label="Orbit Runner 3D">
+      <canvas id="game" width="1280" height="720" aria-label="Área do jogo Orbit Runner 3D"></canvas>
+
+      <div class="hud top-left">
+        <span class="kicker">Orbit Runner</span>
+        <strong id="score">000000</strong>
+        <small>pontuação</small>
+      </div>
+
+      <div class="hud top-right">
+        <span>escudo</span>
+        <div class="shield"><i id="shieldBar"></i></div>
+        <small id="speed">velocidade 1.0x</small>
+      </div>
+
+      <div class="controls">
+        <kbd>←</kbd><kbd>→</kbd><span>mover</span>
+        <kbd>↑</kbd><kbd>↓</kbd><span>profundidade</span>
+        <kbd>Espaço</kbd><span>impulso</span>
+        <kbd>P</kbd><span>pausar</span>
+      </div>
+
+      <div class="overlay" id="overlay">
+        <p class="eyebrow">HTML CSS JS / 3D Canvas</p>
+        <h1>Orbit Runner 3D</h1>
+        <p>Desvie dos meteoros, colete núcleos de energia e mantenha a nave viva no túnel orbital.</p>
+        <button id="startBtn">Iniciar missão</button>
+      </div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
