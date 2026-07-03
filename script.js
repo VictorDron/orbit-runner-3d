@@ -1,3 +1,11 @@
+window.__orbitErrors = [];
+window.addEventListener('error', event => {
+  window.__orbitErrors.push({ message: event.message, source: event.filename, line: event.lineno, column: event.colno });
+});
+window.addEventListener('unhandledrejection', event => {
+  window.__orbitErrors.push({ message: String(event.reason && event.reason.message || event.reason || 'unhandled rejection') });
+});
+
 const canvas = document.getElementById('game');
 const ctx = canvas.getContext('2d');
 const scoreEl = document.getElementById('score');
